@@ -1,13 +1,62 @@
+body {
+  background-color: #323232;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  color: white;
+}
+
+#content {
+  display: flex;
+  justify-content: center; /* horizontal zentrieren */
+  align-items: center;     /* vertikal zentrieren */
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 160px;
+}
+
 table {
-    border-collapse: collapse;
-    margin: 20px auto;
-  }
-  td {
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid #333;
-    font-size: 2em;
-    cursor: pointer;
-  }
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px; /* Rundung an der Tabelle */
+  overflow: hidden;    /* wichtig, damit die Rundung sichtbar wird */
+}
+
+td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+  cursor: pointer;
+  border: 5px solid white;
+  border-radius: 5%;
+}
+
+td:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Entferne den oberen Rand der ersten Zeile */
+table tr:first-child td {
+  border-top: none;
+}
+
+/* Entferne den unteren Rand der letzten Zeile */
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Entferne den linken Rand der ersten Spalte */
+table tr td:first-child {
+  border-left: none;
+}
+
+/* Entferne den rechten Rand der letzten Spalte */
+table tr td:last-child {
+  border-right: none;
+}
